@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compusell Informática | Tecnologia, Performance & Segurança</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-tech-pattern {
+            background-color: #0f172a;
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+        .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <header class="fixed w-full z-[100] bg-white/90 backdrop-blur-lg border-b border-slate-100">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                    <i class="fas fa-microchip text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-extrabold text-blue-900 tracking-tighter leading-none">COMPUSELL</h1>
+                    <p class="text-[10px] font-bold text-emerald-600 uppercase tracking-[0.2em]">Informática</p>
+                </div>
+            </div>
+            
+            <nav class="hidden xl:flex items-center space-x-8 font-semibold text-slate-600">
+                <a href="#inicio" class="hover:text-blue-700 transition">Início</a>
+                <a href="#servicos" class="hover:text-blue-700 transition">Serviços</a>
+                <a href="#solucoes" class="hover:text-blue-700 transition">Soluções</a>
+                <a href="#atendimento" class="hover:text-blue-700 transition">Público</a>
+                <a href="#sobre" class="hover:text-blue-700 transition">Sobre</a>
+                <a href="https://wa.me/55XXXXXXXXXXX" class="bg-emerald-500 text-white px-6 py-3 rounded-full hover:bg-emerald-600 transition shadow-md flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </nav>
+
+            <button id="mobile-btn" class="xl:hidden text-2xl text-blue-900"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[110] bg-blue-900 text-white p-8 transform translate-x-full transition-transform duration-300 xl:hidden">
+        <button id="close-btn" class="absolute top-6 right-6 text-3xl">&times;</button>
+        <nav class="flex flex-col space-y-8 mt-12 text-xl font-bold">
+            <a href="#inicio" onclick="closeMenu()">Início</a>
+            <a href="#servicos" onclick="closeMenu()">Serviços</a>
+            <a href="#solucoes" onclick="closeMenu()">Soluções</a>
+            <a href="#atendimento" onclick="closeMenu()">Para Quem Atendemos</a>
+            <a href="#sobre" onclick="closeMenu()">Sobre</a>
+            <a href="https://wa.me/55XXXXXXXXXXX" class="text-emerald-400 font-black">Falar no WhatsApp</a>
+        </nav>
+    </div>
+
+    <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover opacity-30" alt="Hardware de PC">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/80 to-transparent"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl">
+                <span class="inline-block px-4 py-1 border border-emerald-500 text-emerald-400 rounded-full text-sm font-bold mb-6 tracking-widest uppercase animate-pulse">
+                    Alta Performance & Confiabilidade
+                </span>
+                <h2 class="text-4xl md:text-7xl font-black text-white mb-6 leading-[1.1]">
+                    Tecnologia sob medida para quem exige <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400 font-outline-2">performance máxima.</span>
+                </h2>
+                <p class="text-lg md:text-2xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
+                    Montagem de PCs Gamer, computadores para desenvolvedores e manutenção técnica especializada com foco em segurança e estabilidade.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="https://wa.me/55XXXXXXXXXXX" class="group bg-emerald-500 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-emerald-600 transition shadow-2xl flex items-center justify-center gap-3 transform hover:scale-105">
+                        Solicitar Orçamento <i class="fas fa-arrow-right group-hover:translate-x-2 transition"></i>
+                    </a>
+                    <a href="#servicos" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 transition text-center">
+                        Nossos Serviços
+                    </a>
+                </div>
+                
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-10">
+                    <div>
+                        <p class="text-3xl font-black text-white">+500</p>
+                        <p class="text-sm text-slate-400 uppercase tracking-widest">PCs Montados</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">100%</p>
+                        <p class="text-sm text-slate-400 uppercase tracking-widest">Segurança</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">24h</p>
+                        <p class="text-sm text-slate-400 uppercase tracking-widest">Suporte Remoto</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">Premium</p>
+                        <p class="text-sm text-slate-400 uppercase tracking-widest">Hardware Gold</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-blue-900 font-black text-4xl md:text-5xl mb-4 uppercase italic">Tudo o que sua informática precisa</h2>
+                <p class="text-slate-500 text-lg">Soluções completas, do usuário doméstico ao ambiente corporativo de alta demanda.</p>
+                <div class="w-24 h-2 bg-emerald-500 mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 card-hover border border-slate-100 flex flex-col items-start">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-8">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-blue-900 mb-4 uppercase">Montagem de Computadores</h3>
+                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> PC Gamer de alta performance</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Estações para Programação</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Máquinas para Engenharia/CAD</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Corporativos e Domésticos</li>
+                    </ul>
+                    <a href="https://wa.me/55XXXXXXXXXXX" class="text-blue-700 font-bold hover:underline">Solicitar montagem &rarr;</a>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 card-hover border border-slate-100 flex flex-col items-start">
+                    <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl mb-8">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-blue-900 mb-4 uppercase">Manutenção Técnica</h3>
+                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Manutenção preventiva/corretiva</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Limpeza técnica profunda</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Reparo em placas e circuitos</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Troca de pasta térmica (Premium)</li>
+                    </ul>
+                    <a href="https://wa.me/55XXXXXXXXXXX" class="text-emerald-600 font-bold hover:underline">Agendar manutenção &rarr;</a>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 card-hover border border-slate-100 flex flex-col items-start">
+                    <div class="w-16 h-16 bg-blue-900 text-white rounded-2xl flex items-center justify-center text-3xl mb-8">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-blue-900 mb-4 uppercase">Upgrades & Otimização</h3>
+                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> SSDs NVMe Gen4 / SATA</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Expansão de Memória RAM</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Upgrade de Placa de Vídeo</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Otimização de Software/BIOS</li>
+                    </ul>
+                    <a href="https://wa.me/55XXXXXXXXXXX" class="text-blue-900 font-bold hover:underline">Turbinar meu PC &rarr;</a>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 card-hover border border-slate-100 flex flex-col items-start">
+                    <div class="w-16 h-16 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-3xl mb-8">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-blue-900 mb-4 uppercase">Backup e Segurança</h3>
+                    <p class="text-slate-500 mb-6 text-sm italic">Proteja o que é mais importante: seus dados.</p>
+                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Backup em nuvem e local</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Recuperação de arquivos</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Remoção de malwares/vírus</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 card-hover border border-slate-100 flex flex-col items-start">
+                    <div class="w-16 h-16 bg-slate-100 text-slate-800 rounded-2xl flex items-center justify-center text-3xl mb-8">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-blue-900 mb-4 uppercase">Notebooks</h3>
+                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Troca de Telas e Teclados</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Reparo em Carcaça/Dobradiça</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Substituição de Baterias</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 card-hover border border-slate-100 flex flex-col items-start">
+                    <div class="w-16 h-16 bg-yellow-50 text-yellow-600 rounded-2xl flex items-center justify-center text-3xl mb-8">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-blue-900 mb-4 uppercase">Suporte Técnico</h3>
+                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Atendimento Remoto Imediato</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Visita Técnica Presencial</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500"></i> Suporte Contínuo para Empresas</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="https://wa.me/55XXXXXXXXXXX" class="inline-flex items-center gap-3 bg-blue-900 text-white px-12 py-5 rounded-2xl font-black text-xl hover:bg-blue-800 transition-all shadow-xl">
+                    👉 QUERO UM ORÇAMENTO PERSONALIZADO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucoes" class="py-24 bg-tech-pattern text-white overflow-hidden relative">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight italic uppercase">Soluções Inteligentes para Cada Necessidade</h2>
+                    <p class="text-blue-200 text-xl mb-12">Não vendemos apenas máquinas, projetamos desempenho e tranquilidade.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-emerald-500/20 border border-emerald-500/50 rounded-full flex items-center justify-center text-emerald-400 font-bold">1</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white uppercase">Análise de Perfil</h4>
+                                <p class="text-slate-400">Estudamos sua carga de trabalho ou jogos favoritos para escolher o hardware perfeito.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-emerald-500/20 border border-emerald-500/50 rounded-full flex items-center justify-center text-emerald-400 font-bold">2</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white uppercase">Curadoria Técnica</h4>
+                                <p class="text-slate-400">Somente componentes de marcas líderes com alta durabilidade e garantia real.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-emerald-500/20 border border-emerald-500/50 rounded-full flex items-center justify-center text-emerald-400 font-bold">3</div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white uppercase">Montagem Profissional</h4>
+                                <p class="text-slate-400">Organização impecável de cabos e testes rigorosos de estresse antes da entrega.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/55XXXXXXXXXXX" class="mt-12 inline-block bg-white text-blue-950 px-8 py-4 rounded-xl font-black hover:bg-emerald-400 transition transform hover:scale-105">
+                        FALE COM UM ESPECIALISTA AGORA
+                    </a>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=800&q=80" class="rounded-[3rem] shadow-2xl border border-white/10" alt="Workplace">
+                    <div class="absolute -bottom-10 -left-10 glass p-8 rounded-3xl border border-white/20 hidden md:block">
+                        <p class="text-4xl font-black text-emerald-400">Top Tier</p>
+                        <p class="text-sm font-bold uppercase tracking-[0.2em]">Quality Control</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="atendimento" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-blue-900 font-black text-4xl mb-16 italic uppercase tracking-tighter">Atendemos Você</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-slate-50 p-8 rounded-3xl text-center hover:bg-blue-900 hover:text-white transition-all group">
+                    <i class="fas fa-gamepad text-4xl text-blue-600 mb-6 group-hover:text-emerald-400"></i>
+                    <h4 class="text-xl font-black mb-3 uppercase">Gamers</h4>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300">Máximo FPS, estabilidade extrema e estética impecável.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl text-center hover:bg-blue-900 hover:text-white transition-all group">
+                    <i class="fas fa-code text-4xl text-blue-600 mb-6 group-hover:text-emerald-400"></i>
+                    <h4 class="text-xl font-black mb-3 uppercase">Devs</h4>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300">Ambientes rápidos, virtualização e multitarefa fluida.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl text-center hover:bg-blue-900 hover:text-white transition-all group">
+                    <i class="fas fa-drafting-compass text-4xl text-blue-600 mb-6 group-hover:text-emerald-400"></i>
+                    <h4 class="text-xl font-black mb-3 uppercase">Engenharia</h4>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300">Poder de processamento para CAD, Revit e SolidWorks.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl text-center hover:bg-blue-900 hover:text-white transition-all group">
+                    <i class="fas fa-building text-4xl text-blue-600 mb-6 group-hover:text-emerald-400"></i>
+                    <h4 class="text-xl font-black mb-3 uppercase">Empresas</h4>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300">Segurança de dados, backup e suporte contínuo.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl text-center hover:bg-blue-900 hover:text-white transition-all group">
+                    <i class="fas fa-home text-4xl text-blue-600 mb-6 group-hover:text-emerald-400"></i>
+                    <h4 class="text-xl font-black mb-3 uppercase">Home</h4>
+                    <p class="text-sm text-slate-500 group-hover:text-slate-300">Computadores confiáveis para estudo e lazer diário.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-100">
+        <div class="container mx-auto px-4">
+            <div class="bg-blue-900 rounded-[3rem] p-10 md:p-20 text-white flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-black mb-8 uppercase italic leading-none">Por que escolher a Compusell?</h2>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-check-circle text-emerald-400 text-2xl"></i>
+                            <p class="text-lg"><strong>Atendimento Humano:</strong> Fale direto com o técnico Fernando.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-check-circle text-emerald-400 text-2xl"></i>
+                            <p class="text-lg"><strong>Transparência:</strong> Orçamentos claros, sem taxas escondidas.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-check-circle text-emerald-400 text-2xl"></i>
+                            <p class="text-lg"><strong>Peças Originais:</strong> Só trabalhamos com as melhores marcas do mercado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-white/10 p-8 rounded-3xl text-center border border-white/10">
+                        <i class="fas fa-award text-3xl text-yellow-400 mb-4"></i>
+                        <p class="font-bold uppercase text-xs tracking-widest">Excelência Técnica</p>
+                    </div>
+                    <div class="bg-white/10 p-8 rounded-3xl text-center border border-white/10">
+                        <i class="fas fa-history text-3xl text-emerald-400 mb-4"></i>
+                        <p class="font-bold uppercase text-xs tracking-widest">Entrega Rápida</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <div class="relative inline-block">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="rounded-[3rem] grayscale hover:grayscale-0 transition-all duration-500 shadow-2xl" alt="Técnico Fernando">
+                        <div class="absolute -bottom-6 -right-6 bg-blue-700 text-white p-6 rounded-3xl shadow-xl">
+                            <p class="font-black text-2xl tracking-tighter uppercase">Fernando Conquista</p>
+                            <p class="text-sm font-bold opacity-80 italic">Técnico Responsável</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-blue-900 font-black text-5xl mb-8 italic uppercase tracking-tighter">Quem Somos</h2>
+                    <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                        A <span class="text-blue-700 font-bold">Compusell Informática</span> nasceu para preencher uma lacuna no mercado: o atendimento técnico verdadeiramente especializado e honesto.
+                    </p>
+                    <p class="text-lg text-slate-500 mb-10 leading-relaxed">
+                        Aqui, cada parafuso apertado e cada componente instalado segue um padrão de rigor técnico internacional. Nosso foco não é apenas consertar máquinas, mas garantir que sua produtividade e diversão nunca parem por falhas de hardware.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="w-1 bg-emerald-500"></div>
+                        <p class="italic text-slate-600 text-lg uppercase tracking-widest">Tecnologia Confiável • Desempenho Real</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-center text-blue-900 font-black text-4xl mb-12 uppercase">Dúvidas Frequentes</h2>
+            <div class="space-y-4">
+                <details class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <summary class="flex justify-between items-center font-bold text-lg cursor-pointer list-none text-blue-900">
+                        Vocês dão garantia dos serviços?
+                        <span class="text-emerald-500 transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed">Sim! Todos os nossos serviços de manutenção e montagem possuem garantia técnica. Componentes novos seguem a garantia integral dos fabricantes, que geralmente variam de 1 a 3 anos.</p>
+                </details>
+                <details class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <summary class="flex justify-between items-center font-bold text-lg cursor-pointer list-none text-blue-900">
+                        Posso levar as minhas próprias peças para montagem?
+                        <span class="text-emerald-500 transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed">Com certeza! Oferecemos o serviço de montagem profissional e "cable management" mesmo que você já tenha adquirido as peças. Fazemos a conferência de compatibilidade antes de iniciar.</p>
+                </details>
+                <details class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <summary class="flex justify-between items-center font-bold text-lg cursor-pointer list-none text-blue-900">
+                        Quanto tempo demora uma manutenção preventiva?
+                        <span class="text-emerald-500 transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 leading-relaxed">A limpeza técnica com troca de pasta térmica e testes de estabilidade costuma ser realizada em um prazo de 24h a 48h, dependendo da complexidade do hardware.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-emerald-500 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-6xl font-black mb-8 italic uppercase tracking-tighter">Não perca tempo com soluções improvisadas.</h2>
+            <p class="text-2xl mb-12 font-medium opacity-90 max-w-3xl mx-auto">Fale agora com o Fernando e receba uma orientação profissional para o seu caso.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="https://wa.me/55XXXXXXXXXXX" class="bg-blue-900 text-white px-12 py-6 rounded-2xl font-black text-2xl shadow-2xl hover:bg-slate-800 transition transform hover:-translate-y-2">
+                    <i class="fab fa-whatsapp mr-2"></i> CHAMAR NO WHATSAPP
+                </a>
+                <a href="tel:55XXXXXXXXXXX" class="bg-white text-emerald-600 px-12 py-6 rounded-2xl font-black text-2xl shadow-2xl hover:bg-slate-100 transition transform hover:-translate-y-2 uppercase">
+                    Ligar Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-slate-950 text-white pt-20 pb-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 border-b border-white/10 pb-16 mb-10">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">C</div>
+                        <span class="text-2xl font-black tracking-tighter uppercase italic">Compusell</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">Referência em montagem e manutenção de hardware de alto nível. Performance garantida.</p>
+                </div>
+                <div>
+                    <h4 class="font-black text-lg mb-6 uppercase tracking-widest text-emerald-400 italic underline underline-offset-8 decoration-2">Menu</h4>
+                    <ul class="space-y-3 text-slate-400 font-bold">
+                        <li><a href="#inicio" class="hover:text-white">Início</a></li>
+                        <li><a href="#servicos" class="hover:text-white">Serviços</a></li>
+                        <li><a href="#atendimento" class="hover:text-white">Público</a></li>
+                        <li><a href="#sobre" class="hover:text-white">Quem Somos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-lg mb-6 uppercase tracking-widest text-emerald-400 italic underline underline-offset-8 decoration-2">Contato</h4>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center gap-3"><i class="fab fa-whatsapp text-emerald-500"></i> (XX) XXXXX-XXXX</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-blue-500"></i> contato@compusell.com.br</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-red-500"></i> Atendimento Presencial e Remoto</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-lg mb-6 uppercase tracking-widest text-emerald-400 italic underline underline-offset-8 decoration-2">Siga-nos</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-emerald-500 transition text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-emerald-500 transition text-xl"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-slate-600 text-sm">© 2026 Compusell Informática. Desenvolvido com foco em performance.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/55XXXXXXXXXXX" class="fixed bottom-8 right-8 z-[200] bg-emerald-500 text-white w-20 h-20 rounded-full flex items-center justify-center text-4xl shadow-2xl transition hover:scale-110 animate-bounce">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+        const close = document.getElementById('close-btn');
+
+        btn.addEventListener('click', () => menu.classList.remove('translate-x-full'));
+        close.addEventListener('click', () => menu.classList.add('translate-x-full'));
+
+        function closeMenu() {
+            menu.classList.add('translate-x-full');
+        }
+    </script>
+
+</body>
+</html>
